@@ -1,0 +1,26 @@
+.design {
+  width: 100%;
+  border-top: 1px solid @fade-black;
+}
+
+.design__image {
+  &--accent {
+    margin: 0;
+    width: 230px;
+    height: 158px;
+  }
+
+  @media (min-width: @tablet-width) {   
+    &--accent { 
+      width: 265px;
+      height: 183px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {  
+    &--accent {
+      width: 162px;
+      height: 112px; 
+    }
+  }
+}

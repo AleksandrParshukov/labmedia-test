@@ -1,0 +1,24 @@
+.page {
+  width: 100%;
+  background-color: @white;
+}
+
+.page__body {
+  font-family: 'PT Root UI', "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: @black;
+  font-size: 14px;
+  line-height: 21px;
+  width: @mobile-width;
+  margin: 0 auto;  
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
+}

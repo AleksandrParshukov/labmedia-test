@@ -1,0 +1,148 @@
+.features {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.features__item {
+  font-size: 12px;
+  line-height: 17px;
+  text-align: center;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+  flex-basis: 141px;
+
+  &--accent {
+    color: @white;
+    padding: 20px 15px 26px;
+    border-radius: 5px;
+    background-color: @extra-dark;
+    flex-basis: 100%;
+    flex-grow: 1;
+
+    & .features__text-container--bordered {
+      padding-top: 18px;
+      border-top: 1px solid @fade-white;
+      margin-top: -4px;
+    }
+  }
+
+  &--corps {
+    order: 4;
+    flex-grow: 1;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 21px;
+    flex-basis: 325px;
+    margin-bottom: 50px;
+
+    &--accent {
+      padding-bottom: 27px;
+      flex-grow: 0;
+  
+      & .features__text-container--bordered {
+        padding-top: 18px;
+        margin-top: -6px;
+      }
+    }
+
+    &--corps {
+      order: 0;
+      flex-grow: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) { 
+    height: auto;  
+    margin-bottom: 60px; 
+    flex-basis: 223px;
+
+    &--accent {
+      padding-bottom: 48px;
+
+      & .features__text-container--bordered {
+        font-size: 14px;
+        line-height: 21px;
+        padding-top: 18px;
+        margin-top: -6px;
+      }
+    }
+
+    &--corps {
+      order: 0;
+      flex-grow: 0;
+    }
+  }
+}
+
+.features__image {
+  margin-bottom: 16px;
+  
+  @media (min-width: @tablet-width) {
+    margin-bottom: 14px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 12px;
+  }
+}
+
+.features__text-container {
+  text-align: left;
+
+  &--bordered {
+    padding-top: 20px;
+    font-size: 14px;
+    line-height: 21px;
+    border-top: 1px solid @fade-black;
+    margin-top: 5px;
+  }
+
+  &--additional {
+    font-size: 12px;
+    line-height: 17px;
+    margin-top: 0;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 50px;
+      height: 1px;
+      background-color: @black;
+      position: absolute;
+      top: -1px;
+      left: 0;
+    }
+  }
+
+  @media (min-width: @tablet-width) {  
+    &--additional {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {    
+    font-size: 16px;
+    line-height: 24px;
+
+    &--bordered {
+      padding-top: 18px;
+      margin-top: 7px;
+    }
+
+    &--additional {
+      margin-top: 0;
+    }
+  }
+}
+
+.features__text {
+  margin: 0;
+}
